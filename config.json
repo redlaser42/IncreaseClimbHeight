@@ -1,0 +1,26 @@
+{
+  "InteractMaxHeight": 1.72,
+  "InteractMaxLength": 10,
+  "MinDistantToInteract": 0.6,
+
+  "BaseJumpPenalty": -0.5,
+
+  "MaxOneHandAnimationHeight": 3.8,
+  "MaxWithoutHandHeight": 1.4,
+
+  "VaultingInputTime": 0.5,
+
+  "AnimationVerticalSpeed": 0.9,
+  "AnimationForwardSpeed": 0.6,
+
+  "GridOffsetX": 0,
+  "GridOffsetY": 0,
+  "GridOffsetZ": 0,
+  "GridSizeX": 0,
+  "GridSizeY": 1.8,
+  "GridSizeZ": 2,
+  "OffsetFactor": 0.1,
+  "SteppingLengthX": 0.1,
+  "SteppingLengthY": 0.1,
+  "SteppingLengthZ": 0.1
+}
