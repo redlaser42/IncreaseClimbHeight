@@ -32,7 +32,7 @@ public class VaultingConfig
 }
 
 [Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 1)]
-public class EditDatabaseValues(ISptLogger<EditDatabaseValues> logger, DatabaseService databaseService, ModHelper modHelper)
+public class EditDatabaseValues(DatabaseService databaseService, ModHelper modHelper)
     : IOnLoad
 {
     public Task OnLoad()
