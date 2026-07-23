@@ -1,18 +1,14 @@
 ﻿using SPTarkov.DI.Annotations;
 using SPTarkov.Server.Core.DI;
 using SPTarkov.Server.Core.Helpers;
-using SPTarkov.Server.Core.Models.Eft.Common;
-using SPTarkov.Server.Core.Models.Eft.Common.Tables;
 using SPTarkov.Server.Core.Models.Spt.Mod;
 using SPTarkov.Server.Core.Models.Utils;
 using SPTarkov.Server.Core.Services;
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Text.Json;
 using System.Threading.Tasks;
-using Path = System.IO.Path;
 
 namespace IncreaseClimbHeight;
 
@@ -44,9 +40,6 @@ public class EditDatabaseValues(ISptLogger<EditDatabaseValues> logger, DatabaseS
         VaultingConfig config = JsonSerializer.Deserialize<VaultingConfig>(File.ReadAllText(Path.Combine(modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly()), "config.json")))!;
 
         databaseService.GetGlobals().Configuration.VaultingSettings = config.VaultingSettings;
-
-
-        logger.Info("Increased Climb Height.");
 
         return Task.CompletedTask;
     }
